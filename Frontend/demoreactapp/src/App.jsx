@@ -22,7 +22,7 @@ function App() {
   // Fetch employees
   useEffect(() => {
     axios
-      .get("http://localhost:8080/api/employees")
+      .get("http://localhost:2030/backend/api/employees")
       .then((response) => setEmployees(response.data))
       .catch((error) => console.error("Error fetching employees:", error));
   }, []);
@@ -35,7 +35,7 @@ function App() {
   // Add employee
   const addEmployee = () => {
     axios
-      .post("http://localhost:8080/api/employees", newEmployee)
+      .post("http://localhost:2030/backend/api/employees", newEmployee)
       .then((response) => {
         setEmployees([...employees, response.data]);
         setNewEmployee({
@@ -56,7 +56,7 @@ function App() {
   // Delete employee after confirmation
   const deleteEmployee = () => {
     axios
-      .delete(`http://localhost:8080/api/employees/${deleteEmployeeId}`)
+      .delete(`http://localhost:2030/backend/api/employees/${deleteEmployeeId}`)
       .then(() => {
         setEmployees(employees.filter((emp) => emp.id !== deleteEmployeeId));
         setDeleteEmployeeId(null);
@@ -77,7 +77,7 @@ function App() {
   // Save Edited Employee
   const saveEdit = () => {
     axios
-      .put(`http://localhost:8080/api/employees/${editEmployee.id}`, editEmployee)
+      .put(`http://localhost:2030/backend/api/employees/${editEmployee.id}`, editEmployee)
       .then((response) => {
         setEmployees(
           employees.map((emp) =>
