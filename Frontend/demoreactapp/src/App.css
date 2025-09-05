@@ -1,0 +1,242 @@
+body { 
+  font-family: Arial, sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+  margin: 0;
+  padding: 40px;
+}
+
+.container {
+  width: 95%;
+  max-width: 1200px;
+  padding: 40px;
+  background: #f5f7fa;
+  border-radius: 12px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 48px;
+  font-weight: bold;
+  color: #222;
+}
+
+h2 {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #444;
+}
+
+/* Add Form */
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 35px;
+}
+
+.form input {
+  flex: 1;
+  min-width: 220px;
+  padding: 18px;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  font-size: 18px;
+  transition: all 0.2s ease;
+}
+
+.form input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0px 0px 6px rgba(0,123,255,0.4);
+}
+
+.form button {
+  background-color: skyblue;
+  border: none;
+  padding: 18px 28px;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.form button:hover {
+  background-color: #75abe5;   /* nice bright blue */
+}
+
+/* Employee Table */
+.employee-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.employee-table th,
+.employee-table td {
+  border: 1px solid #ddd;
+  padding: 16px;
+  text-align: center;
+}
+
+.employee-table th {
+  background-color: skyblue;
+  color: white;
+  font-size: 22px;
+}
+
+.employee-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.employee-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.edit {
+  background-color: #ffc107;
+  border: none;
+  padding: 12px 20px;
+  color: whitesmoke;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.edit:hover {
+  background-color: #e0a800;
+}
+
+.delete {
+  background-color: red;
+  border: none;
+  padding: 12px 20px;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.delete:hover {
+  background-color: #a71d2a;
+}
+
+/* Modal overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal box */
+.modal-box {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  width: 380px;
+  text-align: center;
+  box-shadow: 0px 6px 20px rgba(0,0,0,0.2);
+}
+
+.modal-box h3 {
+  margin-bottom: 25px;
+  font-size: 20px;
+  color: #222;
+  font-weight: bold;
+}
+
+/* Buttons inside modal */
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.modal-buttons button {
+  padding: 12px 22px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.modal-buttons button:hover {
+  transform: scale(1.05);
+}
+
+/* Yes Delete Button */
+.btn-delete {
+  background-color: #e63946;
+  color: white;
+}
+
+.btn-delete:hover {
+  background-color: #c1121f;
+}
+
+/* Cancel Button */
+.btn-cancel {
+  background-color: #6c757d;
+  color: white;
+}
+
+.btn-cancel:hover {
+  background-color: #495057;
+}
+/* Modal Inputs */
+.modal-input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 18px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.2s ease;
+}
+
+.modal-input:focus {
+  border-color: blue;
+  outline: none;
+  box-shadow: 0px 0px 6px rgba(0, 123, 255, 0.4);
+}
+
+/* Save Button */
+.btn-save {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.btn-save:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
